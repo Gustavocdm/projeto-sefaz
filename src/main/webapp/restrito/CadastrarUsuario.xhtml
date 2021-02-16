@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<h:outputStylesheet library="css" name="styles.css" />
+	<title>Cadastro de Usuário</title>
+</h:head>
+<h:body>
+
+	<h1>Cadastrar Usuário</h1>
+
+	<h:form>
+		<h:panelGrid columns="2">
+			<p:outputLabel value="Nome" />
+			<p:inputText value="#{usuarioController.usuario.nome}" />
+
+			<p:outputLabel value="Email" />
+			<p:inputText value="#{usuarioController.usuario.email}" />
+
+			<p:outputLabel value="Senha" />
+			<p:inputMask value="#{usuarioController.usuario.senha}"/>
+
+			<p:outputLabel value="Telefones" />
+			<p:inputText  value="#{usuarioController.usuario.telefones}"/>
+
+
+		</h:panelGrid>
+	</h:form>
+	
+</h:body>
+</html>
